@@ -17,7 +17,7 @@
 <br>
 
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Roboto&weight=900&size=24&duration=100&pause=2000&color=28FF2D&repeat=false&width=500&height=34&lines=Deployment)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Roboto&weight=900&size=24&duration=100&pause=2000&color=5e0acc&repeat=false&width=500&height=34&lines=Deployment)](https://git.io/typing-svg)
 
 In order to run the app locally you will need to install all the dependencies from the package.json file.  
 Run the command ``` npm install ``` to install all the dependencies, after it's done you can run ``` npm start``` to start the app locally. 
