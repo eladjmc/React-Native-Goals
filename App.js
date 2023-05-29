@@ -1,13 +1,5 @@
 import { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  TextInput,
-  ScrollView,
-  FlatList,
-} from "react-native";
+import { StyleSheet, View, Button, FlatList, StatusBar } from "react-native";
 import GoalItem from "./components/GoalItem";
 import GoalInput from "./components/GoalInput";
 
@@ -39,26 +31,36 @@ export default function App() {
   };
 
   return (
-    <View style={styles.appContainer}>
-      <Button title="Add New Goal" color="#5e0acc" onPress={toggleModalHandler} />
-      <GoalInput
-        addGoalHandler={addGoalHandler}
-        enteredGoalText={enteredGoalText}
-        goalInputHandler={goalInputHandler}
-        isModalOpen={isModalOpen}
-        toggleModalHandler={toggleModalHandler}
-      />
-      <View style={styles.goalsContainer}>
-        <FlatList
-          data={courseGoals}
-          renderItem={(itemData) => {
-            return (
-              <GoalItem itemData={itemData} onDeleteItem={deleteItemHandler} />
-            );
-          }}
-        ></FlatList>
+    <>
+      <StatusBar style="light" />
+      <View style={styles.appContainer}>
+        <Button
+          title="Add New Goal"
+          color="#5e0acc"
+          onPress={toggleModalHandler}
+        />
+        <GoalInput
+          addGoalHandler={addGoalHandler}
+          enteredGoalText={enteredGoalText}
+          goalInputHandler={goalInputHandler}
+          isModalOpen={isModalOpen}
+          toggleModalHandler={toggleModalHandler}
+        />
+        <View style={styles.goalsContainer}>
+          <FlatList
+            data={courseGoals}
+            renderItem={(itemData) => {
+              return (
+                <GoalItem
+                  itemData={itemData}
+                  onDeleteItem={deleteItemHandler}
+                />
+              );
+            }}
+          ></FlatList>
+        </View>
       </View>
-    </View>
+    </>
   );
 }
 
