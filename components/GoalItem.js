@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
-
+//nothing
 const GoalItem = ({ itemData, onDeleteItem }) => {
   return (
     <View style={styles.goalItem}>
