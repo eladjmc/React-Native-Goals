@@ -9,6 +9,7 @@ const GoalItem = ({ itemData, onDeleteItem }) => {
           onDeleteItem(itemData.index);
         }}
       >
+        <Text style={styles.goalTextTitle}>Goal {itemData.index + 1}</Text>
         <Text style={styles.goalText}>{itemData.item.text}</Text>
       </Pressable>
     </View>
@@ -23,5 +24,6 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     backgroundColor: "#5e0acc",
   },
-  goalText: { color: "white", padding: 8 },
+  goalText: { color: "white", padding: 8, fontWeight: "bold",textAlign: "center" },
+  goalTextTitle: { color: "white", textAlign: "center", fontSize: 18,marginBottom:4, },
 });

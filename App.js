@@ -48,6 +48,7 @@ export default function App() {
         />
         <View style={styles.goalsContainer}>
           <FlatList
+          style={{marginTop: 10}}
             data={courseGoals}
             renderItem={(itemData) => {
               return (
